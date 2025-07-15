@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #1f1c2c, #928DAB, #3E5151, #DECBA4);
+  background-size: 400% 400%;
+  animation: bgAnimation 15s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 40px 10px;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.game-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 16px;
+  display: inline-block;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+select, input, button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 5px;
+  border-radius: 8px;
+  border: none;
+  width: calc(100% - 20px);
+  max-width: 300px;
+}
+
+#guessButton {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#restartButton, #resetScoreButton {
+  background-color: #2196F3;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.animate-win {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px lime; }
+  to { text-shadow: 0 0 20px lime, 0 0 30px lime; }
+}
+.wrong-flash {
+  animation: shake 0.3s;
+  background-color: #ff000033;
+}
+
+@keyframes shake {
+  0% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}

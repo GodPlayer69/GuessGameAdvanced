@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Zorlu Tahmin Oyunu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h2>📊 Skor Tablosu</h2>
+<table id="scoreTable">
+  <thead>
+    <tr>
+      <th>Tarih</th>
+      <th>Zorluk</th>
+      <th>Hak</th>
+      <th>Puan</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+    <h1>🎯 Tahmin Etme Oyunu</h1>
+
+    <select id="difficulty">
+      <option value="50">Kolay (1–50)</option>
+      <option value="100" selected>Orta (1–100)</option>
+      <option value="1000">Zor (1–1000)</option>
+    </select>
+
+    <input type="number" id="guessInput" placeholder="Tahminin..." />
+    <button id="guessButton">Tahmin Et</button>
+
+    <p id="message">Bir zorluk seç ve tahmin et!</p>
+    <p id="attempts">Hak: 10</p>
+    <p id="score">Puan: 0</p>
+
+    <button id="restartButton">🔁 Tekrar Oyna</button>
+    <button id="resetScoreButton">🗑️ Skoru Sıfırla</button>
+  </div>
+
+  <audio id="correctSound" src="correct.mp3"></audio>
+  <audio id="wrongSound" src="wrong.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
